@@ -1,0 +1,464 @@
+{
+  "campaign": "NASQIVO 90-day Instagram campaign",
+  "account": "@nasqivo",
+  "timezone": "Asia/Muscat",
+  "period_start": "2026-11-25",
+  "period_end": "2027-02-22",
+  "cadence": "one item every two days at 19:00",
+  "verified_on": "2026-11-24",
+  "scheduler": "Metricool",
+  "network": "Instagram",
+  "status_note": "PENDING means scheduled; it does not verify future publication. Every record uses autoPublish.",
+  "items": [
+    {
+      "content_id": "post-04",
+      "topic": "رابط واحد يكفي",
+      "publish_at": "2026-11-25T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440355174,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-15532328355820604633.png"
+    },
+    {
+      "content_id": "post-05",
+      "topic": "مشروع منزلي؟",
+      "publish_at": "2026-11-27T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440355701,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-9596929312490563811.png"
+    },
+    {
+      "content_id": "post-06",
+      "topic": "من إنستغرام إلى موقعك",
+      "publish_at": "2026-11-29T19:00:00",
+      "format": "POST",
+      "metricool_post_id": 440355769,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-12823505881480771654.png"
+    },
+    {
+      "content_id": "post-07",
+      "topic": "موقع يناسب نشاطك",
+      "publish_at": "2026-12-01T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440355815,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-5148378676274957127.png"
+    },
+    {
+      "content_id": "post-08",
+      "topic": "أسهل على عملائك",
+      "publish_at": "2026-12-03T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440355885,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-18293157621017996502.png"
+    },
+    {
+      "content_id": "post-09",
+      "topic": "ابدأ حضورك الرقمي",
+      "publish_at": "2026-12-05T19:00:00",
+      "format": "POST",
+      "metricool_post_id": 440355983,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-11684286091107232328.png"
+    },
+    {
+      "content_id": "post-10",
+      "topic": "عندك مشروع كيك؟",
+      "publish_at": "2026-12-07T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440356099,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-16464470192748933834.png"
+    },
+    {
+      "content_id": "post-11",
+      "topic": "وردك يستحق عرض أجمل",
+      "publish_at": "2026-12-09T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440356198,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-424267255326416180.png"
+    },
+    {
+      "content_id": "post-12",
+      "topic": "كتالوج للعبايات",
+      "publish_at": "2026-12-11T19:00:00",
+      "format": "POST",
+      "metricool_post_id": 440356244,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-15756331451152235307.png"
+    },
+    {
+      "content_id": "post-13",
+      "topic": "خدماتك بمكان واحد",
+      "publish_at": "2026-12-13T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440356556,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-2290279507262619957.png"
+    },
+    {
+      "content_id": "post-14",
+      "topic": "موقع أم متجر؟",
+      "publish_at": "2026-12-15T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440356627,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-3420867779984367246.png"
+    },
+    {
+      "content_id": "post-15",
+      "topic": "هل أحتاج دومين؟",
+      "publish_at": "2026-12-17T19:00:00",
+      "format": "POST",
+      "metricool_post_id": 440356695,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-748685060349795427.png"
+    },
+    {
+      "content_id": "post-16",
+      "topic": "كيف نحدد السعر؟",
+      "publish_at": "2026-12-19T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440356754,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-7613181112553429264.png"
+    },
+    {
+      "content_id": "post-17",
+      "topic": "موقع يناسب الجوال",
+      "publish_at": "2026-12-21T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440356814,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-2870077503473695058.png"
+    },
+    {
+      "content_id": "post-18",
+      "topic": "صور منتجاتك مهمة",
+      "publish_at": "2026-12-23T19:00:00",
+      "format": "POST",
+      "metricool_post_id": 440356862,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-16254819521009725457.png"
+    },
+    {
+      "content_id": "post-19",
+      "topic": "خفف الأسئلة المتكررة",
+      "publish_at": "2026-12-25T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440356943,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-17183375573083666046.png"
+    },
+    {
+      "content_id": "post-20",
+      "topic": "تشتغل في الهدايا؟",
+      "publish_at": "2026-12-27T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440356993,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-8645964840429175540.png"
+    },
+    {
+      "content_id": "post-21",
+      "topic": "مشروع بخور وعطور؟",
+      "publish_at": "2026-12-29T19:00:00",
+      "format": "POST",
+      "metricool_post_id": 440357312,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-6171083171887441618.png"
+    },
+    {
+      "content_id": "post-22",
+      "topic": "منيو كافيه واضح",
+      "publish_at": "2026-12-31T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440357375,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-5021871993405340030.png"
+    },
+    {
+      "content_id": "post-23",
+      "topic": "أعمالك هي معرضك",
+      "publish_at": "2027-01-02T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440357439,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-351652701117524388.png"
+    },
+    {
+      "content_id": "post-24",
+      "topic": "تقدم جلسات تدريب؟",
+      "publish_at": "2027-01-04T19:00:00",
+      "format": "POST",
+      "metricool_post_id": 440357492,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-3884714934663284562.png"
+    },
+    {
+      "content_id": "post-25",
+      "topic": "ورش ودورات؟",
+      "publish_at": "2027-01-06T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440357534,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-4346344353377933317.png"
+    },
+    {
+      "content_id": "post-26",
+      "topic": "أسئلة العملاء الشائعة",
+      "publish_at": "2027-01-08T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440357581,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-7660276052425870843.png"
+    },
+    {
+      "content_id": "post-27",
+      "topic": "قبل ما نبدأ",
+      "publish_at": "2027-01-10T19:00:00",
+      "format": "POST",
+      "metricool_post_id": 440357622,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-12394899950255270575.png"
+    },
+    {
+      "content_id": "post-28",
+      "topic": "لا تضيع التفاصيل",
+      "publish_at": "2027-01-12T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440357658,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-3705550419223220384.png"
+    },
+    {
+      "content_id": "post-29",
+      "topic": "ابدأ بشكل بسيط",
+      "publish_at": "2027-01-14T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440357961,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-14997477964741654739.png"
+    },
+    {
+      "content_id": "post-30",
+      "topic": "عرض السعر بوضوح",
+      "publish_at": "2027-01-16T19:00:00",
+      "format": "POST",
+      "metricool_post_id": 440358018,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-2507872023175449062.png"
+    },
+    {
+      "content_id": "post-31",
+      "topic": "كتالوج للمواسم",
+      "publish_at": "2027-01-18T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440358073,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-481232168123122004.png"
+    },
+    {
+      "content_id": "post-32",
+      "topic": "ليش رابط واحد؟",
+      "publish_at": "2027-01-20T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440358138,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-12596689798881681533.png"
+    },
+    {
+      "content_id": "post-33",
+      "topic": "صوّر منتجك صح",
+      "publish_at": "2027-01-22T19:00:00",
+      "format": "POST",
+      "metricool_post_id": 440358178,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-9475996658022577120.png"
+    },
+    {
+      "content_id": "post-34",
+      "topic": "زر الطلب وين؟",
+      "publish_at": "2027-01-24T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440358234,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-16783847431452574305.png"
+    },
+    {
+      "content_id": "post-35",
+      "topic": "ماذا عن الاستضافة؟",
+      "publish_at": "2027-01-26T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440358297,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-8336050350276595780.png"
+    },
+    {
+      "content_id": "post-36",
+      "topic": "مميزات Google Sites",
+      "publish_at": "2027-01-28T19:00:00",
+      "format": "POST",
+      "metricool_post_id": 440358406,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-18101272916723642223.png"
+    },
+    {
+      "content_id": "post-37",
+      "topic": "كيف نبدأ معك؟",
+      "publish_at": "2027-01-30T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440359022,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-2720539214477355398.png"
+    },
+    {
+      "content_id": "post-38",
+      "topic": "صفحة من نحن",
+      "publish_at": "2027-02-01T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440359079,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-12151687740004307631.png"
+    },
+    {
+      "content_id": "post-39",
+      "topic": "منتجات بمقاسات؟",
+      "publish_at": "2027-02-03T19:00:00",
+      "format": "POST",
+      "metricool_post_id": 440359135,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-6362399774994438213.png"
+    },
+    {
+      "content_id": "post-40",
+      "topic": "الانطباع الأول",
+      "publish_at": "2027-02-05T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440359192,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-439277512417933097.png"
+    },
+    {
+      "content_id": "post-41",
+      "topic": "أقسام كتالوج الهدايا",
+      "publish_at": "2027-02-07T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440359259,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-17660595226779625403.png"
+    },
+    {
+      "content_id": "post-42",
+      "topic": "تواصل بدون تعقيد",
+      "publish_at": "2027-02-09T19:00:00",
+      "format": "POST",
+      "metricool_post_id": 440359315,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-6074109910102940854.png"
+    },
+    {
+      "content_id": "post-43",
+      "topic": "اسأل قبل التصميم",
+      "publish_at": "2027-02-11T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440359384,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-10793069917026606553.png"
+    },
+    {
+      "content_id": "post-44",
+      "topic": "هوية مشروعك أولًا",
+      "publish_at": "2027-02-13T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440359432,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-5326781959532037198.png"
+    },
+    {
+      "content_id": "post-45",
+      "topic": "الموقع مش صورة بس",
+      "publish_at": "2027-02-15T19:00:00",
+      "format": "POST",
+      "metricool_post_id": 440359805,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-5724239298716688229.png"
+    },
+    {
+      "content_id": "post-46",
+      "topic": "بعد تسليم الموقع",
+      "publish_at": "2027-02-17T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440359876,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-12976125078973623571.png"
+    },
+    {
+      "content_id": "post-47",
+      "topic": "وش تحتاج لبدء موقعك؟",
+      "publish_at": "2027-02-19T19:00:00",
+      "format": "STORY",
+      "metricool_post_id": 440359919,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-16631857475531138763.png"
+    },
+    {
+      "content_id": "post-48",
+      "topic": "خطوة رقمية جديدة",
+      "publish_at": "2027-02-21T19:00:00",
+      "format": "POST",
+      "metricool_post_id": 440360072,
+      "autoPublish": true,
+      "status_at_verification": "PENDING",
+      "media_url": "https://static.metricool.com/planner/202611/7916658-file-3971225590823886686.png"
+    }
+  ]
+}
