@@ -89,7 +89,7 @@ def logo(draw):
     draw.polygon([(91, 58), (112, 58), (140, 101), (140, 58), (162, 58), (162, 143), (141, 143)], fill="#0F9C8D")
     render_text(draw, "NASQIVO", 195, 64, size=53, color=WHITE)
     draw.line((68, 163, 1010, 163), fill="#35616B", width=2)
-    render_text(draw, "BUSINESS SYSTEMS  /  OMAN", 70, 185, size=19, color="#53E3CC", latin=True)
+    render_text(draw, "BUSINESS SYSTEMS  /  OMAN", 70, 185, size=19, color="#53E3CC")
 
 def template_preview(draw):
     outer = (72, 443, 1008, 928)
@@ -100,7 +100,7 @@ def template_preview(draw):
     draw.rounded_rectangle((112, 505, 499, 554), radius=15, fill="#263D47")
     for i, col in enumerate(["#FB8B77", "#F4CD6A", "#53DBA9"]):
         draw.ellipse((133 + i*27, 525, 145+i*27, 537), fill=col)
-    render_text(draw, "NASQIVO", 275, 518, size=19, latin=True)
+    render_text(draw, "NASQIVO", 275, 518, size=19)
     # Browser content visualization: no fake client screenshots.
     draw.rounded_rectangle((131, 574, 480, 700), radius=18, fill="#204E4B")
     draw.polygon([(140, 690), (220, 614), (265, 657), (328, 596), (465, 689)], fill="#287B73")
@@ -121,7 +121,7 @@ def features_panel(draw, items):
         y = start_y + index * step
         draw.rounded_rectangle((549, y, 980, y+72), radius=18, fill="#0F242A", outline="#26AF9E", width=2)
         draw.rounded_rectangle((922, y+8, 971, y+64), radius=14, fill="#154B48")
-        render_text(draw, str(index+1).zfill(2), 933, y+23, size=19, color=TEAL, latin=True)
+        render_text(draw, str(index+1).zfill(2), 933, y+23, size=19, color=TEAL)
         render_text(draw, item, 908, y+19, size=27, right=True, max_width=320)
 
 def make_one(post, out):
@@ -134,12 +134,12 @@ def make_one(post, out):
     features_panel(d, post["features"])
     # Footer labels.
     d.rounded_rectangle((70, 969, 353, 1030), radius=20, fill="#153D3D", outline=TEAL, width=2)
-    render_text(d, "GOOGLE SITES", 94, 983, size=24, color=WHITE, latin=True)
+    render_text(d, "GOOGLE SITES", 94, 983, size=24, color=WHITE)
     render_text(d, "مواقع واضحة وسهلة التعديل", 1008, 986, size=28, right=True, max_width=590)
     d.line((70, 1085, 1010, 1085), fill="#2F7B72", width=2)
     d.rounded_rectangle((69, 1135, 1010, 1250), radius=40, fill=TEAL)
     render_text(d, post["footer"], 957, 1168, size=39, color="#08242A", right=True, max_width=830)
-    render_text(d, "@nasqivo", 74, 1296, size=22, color=MUTED, latin=True)
+    render_text(d, "@nasqivo", 74, 1296, size=22, color=MUTED)
     render_text(d, "تصميم توضيحي • لا يمثل موقع عميل فعلي", 1008, 1298, size=18, color=MUTED, right=True, max_width=640)
     im.save(out, format="PNG", optimize=True)
 
