@@ -122,14 +122,15 @@ def features_panel(draw, items):
         draw.rounded_rectangle((549, y, 980, y+72), radius=18, fill="#0F242A", outline="#26AF9E", width=2)
         draw.rounded_rectangle((922, y+8, 971, y+64), radius=14, fill="#154B48")
         render_text(draw, str(index+1).zfill(2), 933, y+23, size=19, color=TEAL)
-        render_text(draw, item, 908, y+19, size=27, right=True, max_width=320)
+        display_item = item.replace("(موقع)", "كلمة موقع")
+        render_text(draw, display_item, 908, y+19, size=27, right=True, max_width=320)
 
 def make_one(post, out):
     im = background()
     d = ImageDraw.Draw(im)
     logo(d)
-    render_text(d, post["headline"], 1005, 269, size=73, color=WHITE, right=True, max_width=930)
-    render_text(d, post["subheading"], 999, 366, size=31, color="#75EEDB", right=True, max_width=920)
+    render_text(d, post["headline"], 1005, 236, size=64, color=WHITE, right=True, max_width=930)
+    render_text(d, post["subheading"], 999, 350, size=29, color="#75EEDB", right=True, max_width=920)
     template_preview(d)
     features_panel(d, post["features"])
     # Footer labels.
@@ -138,9 +139,10 @@ def make_one(post, out):
     render_text(d, "مواقع واضحة وسهلة التعديل", 1008, 986, size=28, right=True, max_width=590)
     d.line((70, 1085, 1010, 1085), fill="#2F7B72", width=2)
     d.rounded_rectangle((69, 1135, 1010, 1250), radius=40, fill=TEAL)
-    render_text(d, post["footer"], 957, 1168, size=39, color="#08242A", right=True, max_width=830)
+    footer = post["footer"].replace("برسالة (موقع)", "برسالة موقع").replace("(موقع)", "كلمة موقع").replace("راسل NASQIVO وابدأ", "راسلنا وابدأ")
+    render_text(d, footer, 957, 1168, size=39, color="#08242A", right=True, max_width=830)
     render_text(d, "@nasqivo", 74, 1296, size=22, color=MUTED)
-    render_text(d, "تصميم توضيحي • لا يمثل موقع عميل فعلي", 1008, 1298, size=18, color=MUTED, right=True, max_width=640)
+    render_text(d, "تصميم توضيحي لا يمثل موقع عميل فعلي", 1008, 1298, size=18, color=MUTED, right=True, max_width=640)
     im.save(out, format="PNG", optimize=True)
 
 def main():
