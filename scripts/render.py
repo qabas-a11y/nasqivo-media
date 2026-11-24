@@ -125,7 +125,172 @@ def features_panel(draw, items):
         display_item = item.replace("(موقع)", "كلمة موقع")
         render_text(draw, display_item, 908, y+19, size=27, right=True, max_width=320)
 
+
+def campaign_one(post, out):
+    """Nine distinct editorial layouts; preserve existing POST/STORY formats."""
+    n = int(post["id"].split("-")[1])
+    story = post.get("format") == "STORY"
+    h = 1920 if story else 1350
+    im = Image.new("RGB", (1080,h), "#10242A")
+    d = ImageDraw.Draw(im)
+    # Story-safe layout: 250 px top and bottom, same logical canvas.
+    if story:
+        canvas = Image.new("RGB", (1080,1350), "#10242A")
+        d = ImageDraw.Draw(canvas)
+    else:
+        canvas = im
+    dark="#10242A"; ink="#102D33"; mint="#26E9C5"; ivory="#F4F5EE"
+    light = n in (2,5,7,8)
+    bg = ivory if light else dark
+    fg = ink if light else ivory
+    muted = "#42625F" if light else "#A7CBC5"
+    d.rectangle((0,0,1080,1350),fill=bg)
+    def rr(box,fill,outline=None,r=28,w=2):
+        d.rounded_rectangle(box,radius=r,fill=fill,outline=outline,width=w)
+    def t(s,x,y,sz=42,c=None,right=True,mw=900,bold=True):
+        render_text(d,s,x,y,size=sz,color=c or fg,right=right,max_width=mw,bold=bold)
+    def line(a,b,c=mint,w=3): d.line((a,b),fill=c,width=w)
+    def brand():
+        t("NASQIVO",68,54,38,right=False)
+        t("WEB STUDIO / OMAN",70,111,17,c=muted,right=False)
+        d.rectangle((963,65,1010,112),fill=mint)
+        t("N",974,68,29,c=ink,right=False)
+    def heading(y=182):
+        t(post["headline"],1010,y,69,mw=940)
+        t(post["subheading"],1010,y+110,34,c=muted,mw=940)
+    def footer():
+        line((68,1133),(1012,1133),muted,2)
+        t(post["footer"],1010,1160,44,mw=940)
+        t("@nasqivo",68,1270,24,c=muted,right=False)
+        t("محتوى ترويجي • ناسكيفو",1010,1270,22,c=muted,mw=690)
+    def browser(box, theme, label, kind):
+        x,y,X,Y=box
+        rr(box,"#FFFFFF","#C8D7D1",r=25,w=2)
+        rr((x+12,y+12,X-12,y+58),"#E4EBE7",r=12)
+        for j,col in enumerate(("#E5A18D","#E9C676","#79BDA6")):
+            d.ellipse((x+26+j*22,y+28,x+38+j*22,y+40),fill=col)
+        t(label,X-32,y+76,33,c=ink,mw=X-x-64)
+        d.rectangle((x+22,y+143,X-22,y+265),fill=theme)
+        if kind=="cake":
+            cx=(x+X)//2
+            rr((cx-65,y+200,cx+65,y+250),"#F9DDC1",r=10)
+            rr((cx-48,y+166,cx+48,y+204),"#FFEAD8",r=10)
+            d.ellipse((cx-8,y+154,cx+8,y+170),fill="#B9636B")
+        elif kind=="perfume":
+            cx=(x+X)//2
+            rr((cx-39,y+180,cx+39,y+249),"#CFAD69",r=11)
+            d.rectangle((cx-20,y+159,cx+20,y+184),fill="#322D2A")
+            d.rectangle((cx-27,y+199,cx+27,y+233),fill="#F5E6BE")
+        elif kind=="coffee":
+            cx=(x+X)//2
+            d.ellipse((cx-80,y+226,cx+80,y+250),fill="#CFB594")
+            rr((cx-48,y+179,cx+48,y+233),"#F7E4C8",r=20)
+            d.arc((cx+26,y+179,cx+78,y+230),0,270,fill="#F7E4C8",width=9)
+        else:
+            for j in range(3): rr((x+38+j*(X-x-76)//3,y+172,x+78+j*(X-x-76)//3,y+236),"#72D6B9",r=9)
+        for j in range(3):
+            yy=y+290+j*42
+            if yy+14<Y-20: rr((x+26,yy,X-26-j*35,yy+12),"#D6E3DD",r=5)
+    brand()
+    if n==1:
+        heading()
+        # Monumental browser hero, no repeated four-box panel.
+        rr((69,432,1011,1048),"#1E514F",r=45)
+        for i in range(5):
+            d.arc((95+i*35,447+i*35,985-i*35,1040-i*35),185,355,fill="#32726A",width=2)
+        browser((145,501,933,975),"#1E7769","مشروعك على الويب","generic")
+        rr((750,932,980,1013),mint,r=18)
+        t("موقع تعريفي",956,946,30,c=ink,mw=190)
+    elif n==2:
+        heading()
+        # Before/after: scattered messages versus structured content.
+        for x,label,col in [(69,"قبل","#E5DED4"),(552,"بعد","#D5EEE3")]:
+            rr((x,425,x+460,1050),col,r=30)
+            t(label,x+420,455,46,c=ink,mw=380)
+        for j,s in enumerate(["كم السعر؟","وين الصور؟","كيف أطلب؟"]):
+            x=95+(j%2)*50; y=565+j*135
+            rr((x,y,x+335,y+100),"#FFFFFF",r=20)
+            t(s,x+311,y+20,35,c=ink,mw=285)
+        for j,s in enumerate(["المنتجات","الأسعار","طريقة الطلب"]):
+            y=555+j*135
+            rr((583,y,981,y+99),"#FFFFFF",r=14)
+            d.ellipse((600,y+34,628,y+62),fill="#159C78")
+            t(s,955,y+18,34,c=ink,mw=305)
+        t("تصوّر توضيحي",1010,1060,24,c=muted)
+    elif n==3:
+        heading()
+        # Vertical editorial timeline, large numbers and alternating text.
+        line((910,450),(910,1045),"#367870",5)
+        for j,s in enumerate(post["features"][:4]):
+            y=455+j*155
+            d.ellipse((856,y,964,y+108),fill=mint)
+            t(str(j+1),885,y+13,52,c=ink,right=False)
+            t(s,820,y+23,46,mw=720)
+            line((70,y+119),(820,y+119),"#315853",2)
+    elif n==4:
+        heading()
+        # Isometric-style layered information tiles converge into one link.
+        for j,s in enumerate(post["features"][:4]):
+            x=100+j*190; y=470+(j%2)*70
+            d.polygon([(x,y+50),(x+145,y),(x+230,y+45),(x+85,y+95)],fill="#42BBA2")
+            d.polygon([(x,y+50),(x+85,y+95),(x+85,y+145),(x,y+100)],fill="#17665E")
+            d.polygon([(x+85,y+95),(x+230,y+45),(x+230,y+95),(x+85,y+145)],fill="#258F80")
+            t(s,x+218,y+150,30,mw=225)
+            line((x+115,y+185),(540,846),"#397E73",4)
+        rr((175,842,905,1019),mint,r=72)
+        d.ellipse((222,886,310,974),outline=ink,width=8)
+        d.ellipse((280,886,368,974),outline=ink,width=8)
+        t("رابط مشروعك",860,885,52,c=ink,mw=480)
+    elif n in (5,6,7):
+        heading()
+        themes={5:("#F2C6AB","حلويات منزلية","cake"),6:("#383033","متجر عطور","perfume"),7:("#96755A","مقهى محلي","coffee")}
+        col,label,kind=themes[n]
+        if n==5:
+            rr((67,421,1013,1065),"#E9D2BF",r=44)
+            browser((105,466,695,1021),col,label,kind)
+            for j,s in enumerate(post["features"][:3]): t(s,977,565+j*128,32,c=ink,mw=252)
+        elif n==6:
+            rr((68,425,1012,1060),"#443B32",r=38)
+            for j in range(7): d.line((75+j*145,433,75+j*145,1052),fill="#655440",width=2)
+            browser((235,450,844,1029),col,label,kind)
+            rr((80,842,300,953),"#C9AC76",r=18)
+            t("كتالوج رقمي",288,865,26,c=ink,mw=196)
+        else:
+            rr((69,420,1011,1056),"#DCC7AD",r=33)
+            browser((392,452,968,1022),col,label,kind)
+            for j,s in enumerate(post["features"][:3]):
+                y=540+j*150
+                rr((95,y,370,y+113),"#F8F0E5",r=16)
+                t(s,351,y+25,31,c=ink,mw=235)
+        t("نموذج تخيلي وليس عملاً لعميل",1010,1065,23,c=muted)
+    elif n==8:
+        heading()
+        # FAQ problem/solution, alternating customer and site responses.
+        for j,(q,a) in enumerate([("متى تفتحون؟","ساعات العمل"),("وين مكانكم؟","موقع النشاط"),("كيف أتواصل؟","طرق التواصل")]):
+            y=425+j*215
+            rr((380,y,1010,y+91),"#E4DED5",r=24)
+            t(q,981,y+15,39,c=ink,mw=565)
+            rr((68,y+105,680,y+196),"#C6E9DB",r=24)
+            t(a,650,y+120,36,c=ink,mw=550)
+    else:
+        # Typographic direct-response poster with prominent message.
+        d.ellipse((20,240,1060,1280),outline="#255951",width=3)
+        d.ellipse((90,310,990,1210),outline="#255951",width=3)
+        t("ابدأ",1010,238,164,c=mint,mw=940)
+        t("موقع مشروعك",1010,454,100,mw=940)
+        t(post["subheading"],1010,650,43,c=muted,mw=940)
+        rr((68,820,1012,1030),mint,r=36)
+        t("ناقش فكرتك معنا",970,880,67,c=ink,mw=860)
+    footer()
+    if story:
+        im.paste(canvas,(0,285))
+    canvas_out=im if story else canvas
+    canvas_out.save(out,format="PNG",optimize=True)
+
+
 def make_one(post, out):
+    if post['id'] in {f'post-{i:02d}' for i in range(1,10)}:
+        return campaign_one(post, out)
     im = background()
     d = ImageDraw.Draw(im)
     logo(d)
