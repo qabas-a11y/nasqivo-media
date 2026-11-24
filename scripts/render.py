@@ -144,6 +144,18 @@ def make_one(post, out):
     render_text(d, "@nasqivo", 74, 1296, size=22, color=MUTED)
     render_text(d, "تصميم توضيحي لا يمثل موقع عميل فعلي", 1008, 1298, size=18, color=MUTED, right=True, max_width=640)
     im.save(out, format="PNG", optimize=True)
+    if post.get("format") == "STORY":
+        story = Image.new("RGB", (1080, 1920), BG)
+        sd = ImageDraw.Draw(story)
+        sd.rounded_rectangle((42, 250, 1038, 1562), radius=36, fill="#173D3C", outline=TEAL, width=3)
+        reduced = im.resize((960, 1200), Image.Resampling.LANCZOS)
+        story.paste(reduced, (60, 293))
+        render_text(sd, "NASQIVO", 72, 158, size=53, color=WHITE)
+        render_text(sd, "OMAN / BUSINESS SYSTEMS", 72, 222, size=20, color=TEAL)
+        sd.rounded_rectangle((67, 1608, 1013, 1757), radius=45, fill=TEAL)
+        render_text(sd, "أرسل كلمة موقع بالخاص", 967, 1653, size=50, color="#09262B", right=True, max_width=845)
+        render_text(sd, "@nasqivo", 76, 1810, size=31, color=MUTED)
+        story.save(out, format="PNG", optimize=True)
 
 def main():
     data = json.loads((ROOT / "content" / "posts.json").read_text(encoding="utf-8"))
