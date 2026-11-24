@@ -131,8 +131,23 @@ def make_one(post, out):
     logo(d)
     render_text(d, post["headline"], 1005, 236, size=64, color=WHITE, right=True, max_width=930)
     render_text(d, post["subheading"], 999, 350, size=29, color="#75EEDB", right=True, max_width=920)
-    template_preview(d)
-    features_panel(d, post["features"])
+    style = post.get("style", "browser")
+    if style == "list":
+        d.rounded_rectangle((72, 443, 1008, 928), radius=34, fill="#162A33", outline="#267A70", width=3)
+        for j, item in enumerate(post["features"][:4]):
+            y = 480 + j * 106
+            d.rounded_rectangle((104, y, 978, y + 84), radius=22, fill="#223D43" if j % 2 == 0 else "#11282F", outline="#2F736E", width=2)
+            d.ellipse((126, y + 15, 183, y + 72), fill="#17564E")
+            render_text(d, str(j + 1), 146, y + 29, size=25, color=TEAL)
+            render_text(d, item, 930, y + 20, size=37, right=True, max_width=700)
+    elif style == "question":
+        d.rounded_rectangle((72, 443, 1008, 928), radius=34, fill="#172C38", outline="#267A70", width=3)
+        d.ellipse((135, 555, 460, 880), fill="#144B49", outline=TEAL, width=4)
+        d.text((233, 596), "?", font=ft(210, latin=True), fill=TEAL)
+        features_panel(d, post["features"])
+    else:
+        template_preview(d)
+        features_panel(d, post["features"])
     # Footer labels.
     d.rounded_rectangle((70, 969, 353, 1030), radius=20, fill="#153D3D", outline=TEAL, width=2)
     render_text(d, "GOOGLE SITES", 94, 983, size=24, color=WHITE)
