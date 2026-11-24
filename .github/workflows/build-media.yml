@@ -39,7 +39,9 @@ jobs:
           assert {p.name for p in paths} == expected, "Rendered files do not match post specifications"
           for path in paths:
               with Image.open(path) as picture:
-                  assert picture.size == (1080, 1350), (path, picture.size)
+                  post_spec = next(p for p in json.loads(Path("content/posts.json").read_text(encoding="utf-8"))["posts"] if p["id"] + ".png" == path.name)
+                  expected_size = (1080, 1920) if post_spec.get("format") == "STORY" else (1080, 1350)
+                  assert picture.size == expected_size, (path, picture.size, expected_size)
                   assert picture.format == "PNG"
                   picture.verify()
                   print(f"Verified {path}")
