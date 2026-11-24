@@ -1,0 +1,55 @@
+name: Build NASQIVO public media
+
+on:
+  push:
+    paths:
+      - "content/posts.json"
+      - "scripts/render.py"
+      - ".github/workflows/build-media.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Arabic fonts and renderer
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y fonts-noto-core fontconfig
+          python -m pip install --disable-pip-version-check pillow arabic-reshaper python-bidi
+      - name: Render three NASQIVO posters
+        run: python scripts/render.py
+      - name: Verify image output
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          paths = sorted(Path("media").glob("post-*.png"))
+          assert len(paths) == 3, f"Expected three images, found {len(paths)}"
+          for path in paths:
+              with Image.open(path) as picture:
+                  assert picture.size == (1080, 1350), (path, picture.size)
+                  assert picture.format == "PNG"
+                  picture.verify()
+                  print(f"Verified {path}")
+          PY
+      - name: Commit image files back to public repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/
+          if git diff --cached --quiet; then
+            echo "No media changes"
+          else
+            git commit -m "chore(media): refresh NASQIVO promotional images"
+            git push
+          fi
